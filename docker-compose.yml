@@ -1,0 +1,14 @@
+version: '3'
+services:
+  app:
+    build: .
+    #command: ["npm","start"]
+    command: /bin/bash -c "while true; do sleep 10; done"
+    volumes:
+      - .:/app
+    ports:
+      - "127.0.0.1:8080:8080"
+    # depends_on:
+    #   - db
+    #   - mail
+    #   - redis
